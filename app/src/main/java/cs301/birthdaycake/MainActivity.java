@@ -18,10 +18,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         CakeView cakeView = (CakeView) findViewById(R.id.cakeview);
-        CakeController cakeController = new CakeController(cakeView);
-
         Button blowOut = (Button) findViewById(R.id.button);
+
+
+        CakeController cakeController = new CakeController(cakeView, blowOut);
         blowOut.setOnClickListener(cakeController);
+
 
         Switch candles = (Switch) findViewById(R.id.switch2);
         candles.setOnCheckedChangeListener(cakeController);
